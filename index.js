@@ -1,3 +1,22 @@
-// run `node index.js` in the terminal
+//Carreon, John Zacqueo I.
+//1.
+//2.
+//3.
 
-console.log(`Hello Node.js v${process.versions.node}!`);
+const express = require('express');
+const app = express();
+
+//
+app.use(express.static('public'));
+
+//
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/' + 'index.html');
+});
+
+//
+const port = process.nextTick.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
